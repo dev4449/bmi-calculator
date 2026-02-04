@@ -1,0 +1,22 @@
+{
+  "name": "Ubuntu 24.04 + Node 24",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "options": ["--network=host"]
+  },
+  "remoteUser": "dev",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/dev/workspace,type=bind",
+  "workspaceFolder": "/home/dev/workspace",
+  "postCreateCommand": "node -v && npm -v && npm install",
+  "forwardPorts": [3000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+    "runArgs": ["--network=host"]
+}
