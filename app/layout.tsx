@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local';
+import localFont from "next/font/local";
 
 import "./globals.css";
 
 const interFont = localFont({
   src: [
-    { path: "./fonts/Inter-Regular.ttf", weight: "400"},
-    { path: "./fonts/Inter-SemiBold.ttf", weight: "600"}
+    { path: "./fonts/Inter-Regular.ttf", weight: "400" },
+    { path: "./fonts/Inter-SemiBold.ttf", weight: "600" },
   ],
-  variable: '--font-inter',
-
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -24,11 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={interFont.variable}>
-      <body
-        className={interFont.className}
-      >
-        {children}
-      </body>
+      <body className={interFont.className}>{children}</body>
     </html>
   );
 }
