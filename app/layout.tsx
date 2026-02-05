@@ -4,7 +4,12 @@ import localFont from 'next/font/local';
 import "./globals.css";
 
 const interFont = localFont({
-  src: '/fonts/Inter-VariableFont_slnt,wght.ttf'
+  src: [
+    { path: "./fonts/Inter-Regular.ttf", weight: "400"},
+    { path: "./fonts/Inter-SemiBold.ttf", weight: "600"}
+  ],
+  variable: '--font-inter',
+
 });
 
 export const metadata: Metadata = {
@@ -18,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={interFont.variable}>
       <body
         className={interFont.className}
       >
