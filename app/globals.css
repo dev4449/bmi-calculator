@@ -12,6 +12,16 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-gray-500: #5e6e85;
+  --color-gray-300: #acc1de;
+  --color-blue-900: #253347;
+  --color-blue-500: #345ff6;
+  --color-blue-300: #b3d3f1;
+  --color-blue-100: #e1e7fe;
+
+  --color-gradient-start: #d6fcfe;
+  --color-gradient-end: #d6e6fe;
 }
 
 body {

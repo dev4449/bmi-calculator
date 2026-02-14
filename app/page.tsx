@@ -1,3 +1,5 @@
+import CalculatorArea from "./components/CalculatorArea/CalculatorArea";
+
 export default function Home() {
-  return <div className="font-bold">Hello world!</div>;
+  return <CalculatorArea></CalculatorArea>;
 }
