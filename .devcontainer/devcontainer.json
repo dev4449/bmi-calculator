@@ -2,8 +2,7 @@
   "name": "Ubuntu 24.04 + Node 24",
   "build": {
     "dockerfile": "Dockerfile",
-    "context": "..",
-    "options": ["--network=host"]
+    "context": ".."
   },
   "remoteUser": "dev",
   "workspaceMount": "source=${localWorkspaceFolder},target=/home/dev/workspace,type=bind",
@@ -15,5 +14,5 @@
       "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
     }
   },
-  "runArgs": ["--network=host"]
+  "runArgs": ["-p", "3000:3000"]
 }
